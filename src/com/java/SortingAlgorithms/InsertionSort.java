@@ -19,9 +19,11 @@ public class InsertionSort {
 
 	private static void sortUsingInsertionSort(int[] arr) {
 		for (int i = 1; i < arr.length; i++) {
-			int current = arr[i];//3//-1
-			int prev = i - 1; //0 //2
-
+			int current = arr[i];// 3//-1
+			int prev = i - 1; // 0 //2
+// if this while loop is true means prev element is greater than the next element then 
+			// swap the elements and keep swaping the elements
+			// till the loop is true means the element is on right place
 			while (prev >= 0 && arr[prev] > current) { // true && false
 				arr[prev + 1] = arr[prev];
 				prev--;
