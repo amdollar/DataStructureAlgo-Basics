@@ -3,7 +3,7 @@ package com.java.Exercise;
 public class CheckPalindrome {
 
 	public static void main(String[] args) {
-		String str = new String("aabaa");
+		String str = new String("abcdcba");
 		System.out.println(checkPalindrome(str));
 	}
 
