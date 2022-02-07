@@ -2,8 +2,8 @@ package com.java.BitManipulation;
 
 public class ClearNthBit {
 	public static void main(String[] args) {
-		int num = 13;
-		int bitno = 2;
+		int num = 1;
+		int bitno = 1;
 		int res = clearNthBit(num, bitno);
 		System.out.println("After clearing " + bitno + " from " + num + " : " + res);
 	}
