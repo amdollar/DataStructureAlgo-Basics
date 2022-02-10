@@ -20,6 +20,8 @@ public class PowerFuncation {
 	}
 
 	// find power in optimized manner
+	// if p is even then a(n) = (a ^ (n/2)) ^2
+	// if p is odd then a(n) = a * (a ^ (n/2)) ^2
 	private static int findPowerOptimized(int n, int p) {
 		if (p == 0) {
 			return 1;
