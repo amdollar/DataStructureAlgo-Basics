@@ -7,8 +7,22 @@ public class MirrorTree {
 	public static void main(String[] args) {
 		TreeUtils tree = new TreeUtils();
 		Node root = tree.constructTree();
-		boolean isMirror = isMirror(root);
-		System.out.println(isMirror);
+//		boolean isMirror = isMirror(root);
+//		System.out.println(isMirror);
+		boolean isMirror2 = isMirror(root.left, root.right);
+		System.out.println(isMirror2);
+	}
+
+	// optimized way of finding mirror using recursion.
+
+	private static boolean isMirror(Node left, Node right) {
+		if (left == null || right == null) {
+			return left == right;
+		}
+		if (left.data != right.data)
+			return false;
+
+		return isMirror(left.left, right.right) && isMirror(left.right, right.left);
 	}
 
 	private static boolean isMirror(Node root) {
