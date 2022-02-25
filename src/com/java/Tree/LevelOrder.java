@@ -5,21 +5,8 @@ import java.util.Queue;
 
 public class LevelOrder {
 	public static void main(String[] args) {
-		Node root = new Node(1);
-		Node left = new Node(2);
-		Node right = new Node(3);
-		root.left = left;
-		root.right = right;
-
-		Node left1 = new Node(4);
-		Node right1 = new Node(5);
-		left.left = left1;
-		left.right = right1;
-
-		Node right2 = new Node(6);
-		right.right = right2;
-		Node left3 = new Node(7);
-		right1.left = left3;
+		TreeUtils tree = new TreeUtils();
+		Node root = tree.constructTree();
 
 //		inOrder(root);
 		levelOrder(root);
