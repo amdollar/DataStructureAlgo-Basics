@@ -6,7 +6,7 @@ public class PrintAllSubsequences {
 		int[] arr = new int[] { -2, 3, 4, -1, 5, -12, 6, 1, 3 };
 //		printAllSubsequences(arr);
 //		printLargestSumWithPrefixSumArray(arr);
-//		lagrestSumKadaneAlgo(arr);
+		lagrestSumKadaneAlgo(arr);
 	}
 
 // brute force -> n^3

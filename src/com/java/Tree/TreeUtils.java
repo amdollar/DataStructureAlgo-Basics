@@ -27,7 +27,7 @@ public class TreeUtils {
 
 		root.right.left = null;
 		root.right.right = new Node(14);
-		root.right.right.left = new Node(15);
+		root.right.right.left = new Node(13);
 		return root;
 	}
 
