@@ -5,8 +5,8 @@ public class LongestCommonSubsequence {
 	static int[][] t = new int[20][20];
 
 	public static void main(String[] args) {
-		String text1 = "abcde";
-		String text2 = "abc";
+		String text1 = "aaaaaaaa";
+		String text2 = "aaaaaaaa";
 //		fillMatrix();
 		int lcsl = longestCommonSubsequence(text1, text2);
 		System.out.println(lcsl);
