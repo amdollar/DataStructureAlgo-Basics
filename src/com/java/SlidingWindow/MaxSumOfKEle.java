@@ -3,8 +3,8 @@ package com.java.SlidingWindow;
 public class MaxSumOfKEle {
 // for given array find out the max sum of k consecutive elements.
 	public static void main(String[] args) {
-		int arr[] = new int[] {1, 4, 2, 10, 23, 3, 1, 0, 20 };
-		int ans = findSum(arr, 4);
+		int arr[] = new int[] { 2, 5, 1, 8, 2, 9, 1 };
+		int ans = findSum(arr, 3);
 		System.out.println(ans);
 	}
 
