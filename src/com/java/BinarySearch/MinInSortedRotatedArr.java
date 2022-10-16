@@ -1,14 +1,14 @@
 package com.java.BinarySearch;
 
-public class MinInSortedRotatedArray {
+public class MinInSortedRotatedArr {
 
 	public static void main(String[] args) {
 		int arr[] = new int[] { 3, 5, 1 };
-		int res = noOfTimesArrayRotated(arr);
+		int res = findMin(arr);
 		System.out.println(res);
 	}
 
-	private static int noOfTimesArrayRotated(int[] arr) {
+	private static int findMin(int[] arr) {
 		int n = arr.length;
 		if (n == 1) {
 			return arr[0];
@@ -21,7 +21,7 @@ public class MinInSortedRotatedArray {
 			int prev = (mid - 1 + n) % n;
 			int next = (mid + 1) % n;
 			if (arr[mid] < arr[prev] && arr[mid] < arr[next]) {
-				return n - mid;
+				return arr[mid];
 			} else if (arr[mid] >= arr[end]) {
 				start = next;
 			} else {
