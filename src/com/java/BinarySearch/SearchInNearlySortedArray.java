@@ -4,8 +4,8 @@ package com.java.BinarySearch;
 public class SearchInNearlySortedArray {
 
 	public static void main(String[] args) {
-		int arr[] = new int[] { 10, 5, 30, 20, 40 };
-		int ele = 30;
+		int arr[] = new int[] { 10, 3, 40, 20, 50, 80, 70 };
+		int ele = 90;
 		int res = searchInNearlySortedArray(arr, ele);
 		System.out.println(res);
 
@@ -33,7 +33,6 @@ public class SearchInNearlySortedArray {
 					start = mid + 2;
 			}
 		}
-
 		return res;
 	}
 
