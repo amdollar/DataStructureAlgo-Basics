@@ -1,3 +1,4 @@
+
 package com.java.Arrays;
 
 public class FindMajorityElement {
