@@ -15,10 +15,12 @@ public class GraphRepresentation {
 		}
 
 		// 1->2
+		// 2->1
 		graph.get(1).add(2);
 		graph.get(2).add(1);
 
 		// 2->3
+		// 3->2
 		graph.get(2).add(3);
 		graph.get(3).add(2);
 
