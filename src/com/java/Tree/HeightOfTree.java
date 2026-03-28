@@ -13,9 +13,10 @@ public class HeightOfTree {
 		if (root == null) {
 			return 0;
 		}
-		int h1 = getHeight(root.left);
-		int h2 = getHeight(root.right);
-		return 1 + Math.max(h1, h2);
+		int leftHeight = getHeight(root.left);
+		int rightHeight = getHeight(root.right);
+
+		return 1 + Math.max(leftHeight, rightHeight);
 	}
 
 }

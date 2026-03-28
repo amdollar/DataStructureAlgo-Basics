@@ -7,7 +7,7 @@ public class RemoveDuplicate {
 		String res = removeDuplicates(str);
 		System.out.println(res);
 	}
-
+//gekfors
 	private static String removeDuplicates(String str) {
 		int[] frequency = new int[26];
 		StringBuilder sb = new StringBuilder();
