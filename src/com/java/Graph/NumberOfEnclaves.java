@@ -1,5 +1,11 @@
 package com.java.Graph;
 
+/*You are given an m x n binary matrix grid, where 0 represents a sea cell and 1 represents a land cell.
+
+A move consists of walking from one land cell to another adjacent (4-directionally) land cell or walking off the boundary of the grid.
+
+Return the number of land cells in grid for which we cannot walk off the boundary of the grid in any number of moves.*/
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -16,7 +22,9 @@ public class NumberOfEnclaves {
 	}
 
 	public static void main(String[] args) {
-		int[][] grid = { { 0, 0, 0, 0 }, { 1, 0, 1, 0 }, { 0, 1, 1, 0 }, { 0, 0, 0, 0 } };
+//		int[][] grid = { { 0, 0, 0, 0 }, { 1, 0, 1, 0 }, { 0, 1, 1, 0 }, { 0, 0, 0, 0 } };
+
+		int[][] grid = { { 0 }, { 1 }, { 1 }, { 0 }, { 0 } };
 		int n = grid.length;
 		int m = grid[0].length;
 
@@ -73,7 +81,7 @@ public class NumberOfEnclaves {
 				int currow = row + deltarows[i];
 				int curcol = col + deltacols[i];
 
-				if (currow >= 0 && currow < n && curcol >= 0 && curcol < n && grid[currow][curcol] == 1
+				if (currow >= 0 && currow < n && curcol >= 0 && curcol < m && grid[currow][curcol] == 1
 						&& visited[currow][curcol] != 1) {
 					queue.offer(new Pair(currow, curcol));
 					visited[currow][curcol] = 1;
