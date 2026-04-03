@@ -69,7 +69,7 @@ public class CycleInDirectedGraph {
 		path[node] = 1;
 
 		for (int neighbour : graph.get(node)) {
-			if (path[neighbour] == 0) {
+			if (visited[neighbour] == 0) {
 				if (dfs(graph, visited, path, neighbour))
 					return true;
 			} else if (path[neighbour] == 1) {
