@@ -72,7 +72,7 @@ public class AlienDictionary {
 			ansls.add(curr);
 
 			for (int nei : adj.get(curr)) {
-				// reduce the indegree for the neighbour node:
+				// reduce the in-degree for the neighbor node:
 				indegree[nei]--;
 				// if now the in-degree is 0 add it to the queue for further processing
 				if (indegree[nei] == 0) {
