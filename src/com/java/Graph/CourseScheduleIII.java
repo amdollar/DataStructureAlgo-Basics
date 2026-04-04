@@ -61,6 +61,7 @@ public class CourseScheduleIII {
 		while (!queue.isEmpty()) {
 			int temp = queue.poll();
 			count++;
+			
 
 			for (int adj : graph.get(temp)) {
 				indegree[adj]--;
