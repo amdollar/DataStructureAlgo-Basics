@@ -90,7 +90,6 @@ public class ShortestPathDAG {
 			}
 		}
 		stack.add(node);
-
 	}
 
 }
