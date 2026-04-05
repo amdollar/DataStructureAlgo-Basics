@@ -17,7 +17,7 @@ public class SortestPathUnDirectedGraph {
 
 		List<List<Integer>> adj = new ArrayList<>();
 		for (int i = 0; i < e; i++) {
-			adj.add(new ArrayList<>());
+			adj.add(new ArrayList<>()); 
 		}
 
 		for (int i = 0; i < e; i++) {
