@@ -24,7 +24,7 @@ public class MinimumDistanceDijstraSet {
 				{ 4, 5, 3 } };
 		int V = 6;
 		int E = edges.length;
-		
+
 		int source = 0;
 
 		// Implement dijkstra using Set data structure instead of Priority Queue;
@@ -49,7 +49,8 @@ public class MinimumDistanceDijstraSet {
 		distance[source] = 0;
 
 		// Create Set and start filling the values for further processing
-		TreeSet<Node> st = new TreeSet<Node>((a, b) -> (a.distance == b.distance) ? a.target - b.target : a.distance - b.distance);
+		TreeSet<Node> st = new TreeSet<Node>(
+				(a, b) -> (a.distance == b.distance) ? a.target - b.target : a.distance - b.distance);
 		st.add(new Node(source, 0));
 
 		while (!st.isEmpty()) {
@@ -67,19 +68,17 @@ public class MinimumDistanceDijstraSet {
 					if (distance[temptar] != Integer.MAX_VALUE) {
 						st.remove(new Node(temptar, distance[temptar]));
 					}
-					distance[temptar] = cudis + tempdis; 
+					distance[temptar] = cudis + tempdis;
 					st.add(new Node(temptar, distance[temptar]));
 
 				}
 
 			}
-			
+
 		}
-		for(int i : distance) {
+		for (int i : distance) {
 			System.out.println(i);
 		}
-
-		
 
 	}
 
