@@ -43,6 +43,9 @@ public class ShortedDistanceInBinaryMaze {
 
 //		We need a Queue to process all the nodes since we are going to use BFS:
 
+		int[] deltarows = { -1, 0, +1, 0 };
+		int[] deltacols = { 0, +1, 0, -1 };
+
 		Queue<Tuple> queue = new LinkedList<>();
 		queue.add(new Tuple(0, source[0], source[1]));
 
@@ -58,9 +61,6 @@ public class ShortedDistanceInBinaryMaze {
 
 			// Mark this tile of grid as visited/distance
 //			dis[c_row][c_col] =  c_dis;
-
-			int[] deltarows = { -1, 0, +1, 0 };
-			int[] deltacols = { 0, +1, 0, -1 };
 
 			for (int i = 0; i < deltarows.length; i++) {
 				int new_row = c_row + deltarows[i];
