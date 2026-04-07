@@ -34,6 +34,14 @@ public class ShortedDistanceInBinaryMaze {
 		// WE would need one distance array to capture and compare the distance while
 		// processing/traversing the nodes
 
+		if (source[0] == distination[0] && source[1] == distination[1])
+			System.out.println("source and destination are same so distance: " + 0);
+
+		if (grid[source[0]][source[1]] == 0 || grid[distination[0]][distination[1]] == 0) {
+			System.out.println(-1);
+			return;
+		}
+
 		int[][] dis = new int[n][m];
 		for (int[] row : dis)
 			Arrays.fill(row, Integer.MAX_VALUE);
@@ -57,6 +65,7 @@ public class ShortedDistanceInBinaryMaze {
 
 			if (c_row == distination[0] && c_col == distination[1]) {
 				ansSteps = c_dis;
+				return;
 			}
 
 			// Mark this tile of grid as visited/distance
@@ -66,8 +75,8 @@ public class ShortedDistanceInBinaryMaze {
 				int new_row = c_row + deltarows[i];
 				int new_col = c_col + deltacols[i];
 
-				if (new_row >= 0 && new_row < n && new_col >= 0 && new_col < m
-						&& dis[new_row][new_col] == Integer.MAX_VALUE && grid[new_row][new_col] != 0) {
+				if (new_row >= 0 && new_row < n && new_col >= 0 && new_col < m && dis[new_row][new_col] > c_dis + 1
+						&& grid[new_row][new_col] != 0) {
 					dis[new_row][new_col] = c_dis + 1;
 					queue.add(new Tuple(c_dis + 1, new_row, new_col));
 				}
