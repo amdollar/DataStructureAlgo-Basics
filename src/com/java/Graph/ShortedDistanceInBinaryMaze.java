@@ -34,8 +34,10 @@ public class ShortedDistanceInBinaryMaze {
 		// WE would need one distance array to capture and compare the distance while
 		// processing/traversing the nodes
 
-		if (source[0] == distination[0] && source[1] == distination[1])
+		if (source[0] == distination[0] && source[1] == distination[1]) {
 			System.out.println("source and destination are same so distance: " + 0);
+			return;
+		}
 
 		if (grid[source[0]][source[1]] == 0 || grid[distination[0]][distination[1]] == 0) {
 			System.out.println(-1);
@@ -65,6 +67,7 @@ public class ShortedDistanceInBinaryMaze {
 
 			if (c_row == distination[0] && c_col == distination[1]) {
 				ansSteps = c_dis;
+				System.out.println(ansSteps);
 				return;
 			}
 
