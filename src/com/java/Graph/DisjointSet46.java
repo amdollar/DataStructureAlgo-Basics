@@ -18,7 +18,7 @@ public class DisjointSet46 {
 			}
 		}
 
-		// mathod to find the findUParent
+		// Method to find the findUParent
 
 		public int findUParent(int node) {
 			if (parents.get(node) == node) {
@@ -47,7 +47,6 @@ public class DisjointSet46 {
 				parents.set(ultpu, ultpv);
 			} else {
 				parents.set(ultpu, ultpv);
-				int curr_rank = rank.get(ultpv);
 				rank.set(ultpu, rank.get(ultpu) + 1);
 			}
 
