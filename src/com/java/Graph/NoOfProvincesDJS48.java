@@ -33,12 +33,12 @@ public class NoOfProvincesDJS48 {
 			int rpv = rank.get(pv);
 
 			if (rpu < rpv) {
-				parent.set(rpu, rpv);
+				parent.set(pu, pv);
 			} else if (rpu > rpv) {
 				parent.set(pv, pu);
 			} else {
 				parent.set(pv, pu);
-				rank.set(rpu, rank.get(pu) + 1);
+				rank.set(pu, rank.get(pu) + 1);
 			}
 
 		}
@@ -61,7 +61,7 @@ public class NoOfProvincesDJS48 {
 		int[][] isConnected = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } };
 		DisJointSet ds = new DisJointSet(isConnected[0].length);
 
-		for (int i = 0; i < isConnected.length; i++) {
+		for(int i = 0; i < isConnected.length; i++) {
 			for (int j = 0; j < isConnected.length; j++) {
 				if (isConnected[i][j] == 1) {
 					ds.union(i, j);
