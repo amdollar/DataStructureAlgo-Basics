@@ -109,7 +109,7 @@ public class MakingALargeIsland52 {
 		for (int i = 0; i < n * m; i++) {
 			max = Math.max(max, ds.size.get(ds.findParent(i)));
 		}
-		
+
 		System.out.println(max);
 
 	}
